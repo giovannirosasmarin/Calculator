@@ -31,6 +31,7 @@ public class EvaluatorTester {
             try {
                 System.out.format("%42s = %5s : %-5d\n", test[i], evaluator.eval(test[i]), res[i]);
             } catch (Exception ex) {
+                System.out.println(ex.getMessage());
                 System.out.format("%42s = %5s : %-5s\n", test[i], "error", res[i]);
             }
 

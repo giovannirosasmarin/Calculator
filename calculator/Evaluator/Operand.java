@@ -1,20 +1,39 @@
 package Evaluator;
 
-public class Operand {
+public class Operand
+{
 
-  public Operand( String token ) {
+
+ int value;
+
+  public Operand( String token )
+  {
+      this.value = Integer.parseInt(token);
 
   }
 
-  public Operand( int value ) {
+  public Operand( int value )
+  {
+      this.value = value;
 
   }
 
-  public int getValue() {
-      return 0;
-  }
+  public static boolean check( String token )
+  {
+        try
+        {
+            Integer.parseInt(token);
+        }
+        catch(Exception e)
+        {
+            return false;
+        }
+        return true;
 
-  public static boolean check( String token ) {
-      return false;
   }
+    public int getValue()
+    {
+        return value;
+    }
+
 }
