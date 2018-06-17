@@ -19,7 +19,7 @@ public abstract class Operator
  public abstract int priority();
         /*      Priority for each operator:
         * 				"(" 0
-        * 				")" 1
+        * 				")" 0
         * 				"+" 2
         * 				"-" 2
         * 				"*" 3
