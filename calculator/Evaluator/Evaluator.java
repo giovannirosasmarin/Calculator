@@ -25,7 +25,7 @@ public void CloseparCheck()
         operandStack.push( oldOpr.execute( op1, op2));
     }
     operatorStack.pop();
-    
+
 }
 
 
@@ -138,16 +138,15 @@ public void CloseparCheck()
                     operandStack.push( oldOpr.execute( op1, op2 ));
                     break;
                 }
-                
-           
+
+
             default:
 
                 break;
    }
 
 
-//if(operandStack.pop().getValue() == Exception){
-//}
+
         // Control gets here when we've picked up all of the tokens; you must add
         // code to complete the evaluation - consider how the code given here
         // will evaluate the expression 1+2*3
