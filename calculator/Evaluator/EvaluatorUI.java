@@ -25,6 +25,7 @@ public class EvaluatorUI extends JFrame implements ActionListener
      * C  is for clear, clears entire expression
      * CE is for clear expression, clears last entry up until the last operator.
      */
+    private static String CEE;
     private Button[] buttons = new Button[bText.length];
 
     public static void main(String argv[]) 
@@ -118,9 +119,21 @@ public class EvaluatorUI extends JFrame implements ActionListener
         txField.setText("");
 
     }if(arg0.getSource() == buttons[19]){                        //if statement for "CE" it will clear any thing. I tried making a function to return the last textfield but could get there
-
+                                                                    //Found an example to get textField before
         //CE
-        txField.setText("");
+        if(txField.getText().length() <= 1)  {
+
+            CEE = "";
+
+            txField.setText("");
+
+        } else     {
+
+            CEE = txField.getText().substring(0, txField.getText().length() - 1);
+
+            txField.setText(CEE);
+
+        }
 
     }
 
